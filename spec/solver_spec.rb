@@ -22,4 +22,18 @@ describe 'Solver' do
       expect(solver.reverse('hello')).to eql('olleh')
     end
   end
-end
+
+    context '#fizzbuzz' do
+      solver = Solver.new
+
+      it 'Takes an integer parameter and returns a string' do
+        expect(solver.fizzbuzz(3)).to eq('fizz')
+        expect(solver.fizzbuzz(5)).to eq('buzz')
+        expect(solver.fizzbuzz(15)).to eq('fizzbuzz')
+      end
+
+      it 'Should return the integer if not divisible by 3 or 5' do
+        expect(solver.fizzbuzz(7)).to eq(7)
+      end
+    end
+  end
