@@ -14,4 +14,12 @@ describe 'Solver' do
       expect(solver.factorial(-4)).to eql('Error: negative number')
     end
   end
+
+  context '#reverse' do
+    solver = Solver.new
+
+    it 'should take a string as a parameter & returns it reversed' do
+      expect(solver.reverse('hello')).to eql('olleh')
+    end
+  end
 end
